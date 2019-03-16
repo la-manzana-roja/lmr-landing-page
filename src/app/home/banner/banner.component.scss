@@ -4,18 +4,60 @@
   @media #{$small-and-down} {
     height: calc(100vh - 56px);
   }
-
-  .parallax img {
-    @media #{$small-and-down} {
-      left: 0px;
-    }
-  }
 }
 
 .banner-container {
   height: 100%;
+}
 
-  @media #{$small-and-down} {
-    text-align: center;
+.arrow-down {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+  width: 200px;
+  margin: auto;
+  display: block;
+  padding-bottom: 40px;
+}
+
+.arrow-down .material-icons {
+  margin-top: 20px;
+  display: block;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  50% {
+    -webkit-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+  }
+
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  50% {
+    -webkit-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+  }
+
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 }
