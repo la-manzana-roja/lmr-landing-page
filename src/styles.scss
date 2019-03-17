@@ -1,6 +1,6 @@
-@import "node_modules/materialize-css/sass/components/color-variables";
+@import "../node_modules/materialize-css/sass/components/color-variables";
 
-$primary-color: color("red", "base") !default;
+$primary-color: color('red', 'lighten-3') !default;
 $primary-color-light: false !default;
 $primary-color-dark: false !default;
 
@@ -12,13 +12,19 @@ $primary-color-dark: false !default;
   $primary-color-dark: darken($primary-color, 15%);
 }
 
-$secondary-color: color("teal", "lighten-1") !default;
-$success-color: color("green", "base") !default;
-$error-color: color("red", "base") !default;
+$secondary-color: color('teal', 'lighten-1') !default;
+$success-color: color('green', 'base') !default;
+$error-color: color('red', 'base') !default;
 
-$link-color: color("light-blue", "darken-1") !default;
+$link-color: color('light-blue', 'darken-1') !default;
 
-@import "../node_modules/materialize-css/sass/materialize";
+@import '../node_modules/materialize-css/sass/materialize';
+@import '../node_modules/aos/dist/aos.css';
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro');
+
+body {
+  font-family: 'Maven Pro', sans-serif;
+}
 
 body,
 lmr-root {
