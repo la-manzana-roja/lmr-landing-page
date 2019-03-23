@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "firebase:deploy": "firebase deploy"
+    "firebase:deploy": "firebase deploy",
+    "firebase:override-keys": "echo $FIREBASE_CONFIG_KEYS > ./src/environments/firebase-config.ts"
   },
   "private": true,
   "dependencies": {

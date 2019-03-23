@@ -57,7 +57,6 @@ exports.updateNewMetadata = functions.https.onRequest((request, response) => {
       })
       .catch(error => response.status(500).send(error));
   });
-
 });
 
 exports.updateNewViews = functions.https.onRequest((request, response) => {
