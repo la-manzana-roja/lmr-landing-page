@@ -1,14 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { FormsModule }   from '@angular/forms';
 
-import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './home.component';
 import { BannerComponent } from './banner/banner.component';
 import { MetricsComponent } from './metrics/metrics.component';
 
+import { TopNewsComponent } from './top-news/top-news.component';
+import { NewsService } from '../shared/news/news.service';
+import { ParallaxDirective } from '../shared/parallax/parallax.directive';
+
 @NgModule({
-  declarations: [HomeComponent, BannerComponent, MetricsComponent],
-  imports: [CommonModule, FormsModule, SharedModule]
+  declarations: [
+    HomeComponent,
+    BannerComponent,
+    TopNewsComponent,
+    ParallaxDirective,
+    MetricsComponent
+  ],
+  imports: [CommonModule, RouterModule, FormsModule],
+  providers: [NewsService]
 })
 export class HomeModule {}
