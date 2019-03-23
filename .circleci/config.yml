@@ -26,6 +26,9 @@ jobs:
           name: Linting
           command: npm run lint
       - run:
+          name: Inject Firebase DB keys
+          command: npm run firebase:override-keys
+      - run:
           name: Building
           command: npm run build:client
       - save_cache:
