@@ -28,6 +28,6 @@ export abstract class DataService<T extends DataType> {
     const url = `${environment.cloudFunctionsUrl}/${functionName}`;
     const data: DataType = { id };
 
-    return this.http.post<T>(url, data);
+    return this.http.put<T>(url, data);
   }
 }
