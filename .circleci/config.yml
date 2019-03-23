@@ -61,7 +61,13 @@ workflows:
   version: 2
   -deploy:
     jobs:
-      - build
+      - build:
+          filters:
+            branches:
+              only: develop
       - deploy:
           requires:
             - build
+          filters:
+            branches:
+              only: develop
