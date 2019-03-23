@@ -1,7 +1,7 @@
 <h4 class="center-align">Noticias</h4>
 <div class="row center-align">
   <div *ngFor="let new of news$ | async" class="col s12 m4">
-    <div class="card left-align">
+    <div class="card left-align" data-aos="fade-up" data-aos-duration="1000">
       <div class="card-image waves-effect waves-block waves-light">
         <img class="activator" [src]="new.image? new.image : defaultImage" [alt]="new.title">
       </div>

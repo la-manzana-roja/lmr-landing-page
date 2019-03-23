@@ -31,3 +31,36 @@
 [debug] [2019-03-23T00:30:42.832Z] Parsing function triggers
 [info] +  functions: updateNewMetadata: http://localhost:5000/lamanzanarojawebsite/us-central1/updateNewMetadata
 [info] +  functions: updateNewViews: http://localhost:5000/lamanzanarojawebsite/us-central1/updateNewViews
+[debug] [2019-03-23T03:11:02.599Z] ----------------------------------------------------------------------
+[debug] [2019-03-23T03:11:02.601Z] Command:       /usr/local/Cellar/node@8/8.14.0/bin/node /usr/local/bin/firebase serve --only functions
+[debug] [2019-03-23T03:11:02.601Z] CLI Version:   6.5.0
+[debug] [2019-03-23T03:11:02.601Z] Platform:      darwin
+[debug] [2019-03-23T03:11:02.601Z] Node Version:  v8.14.0
+[debug] [2019-03-23T03:11:02.602Z] Time:          Fri Mar 22 2019 23:11:02 GMT-0400 (-04)
+[debug] [2019-03-23T03:11:02.602Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-03-23T03:11:02.611Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-03-23T03:11:02.611Z] > authorizing via signed-in user
+[debug] [2019-03-23T03:11:02.611Z] [iam] checking project lamanzanarojawebsite for permissions ["firebase.projects.get"]
+[debug] [2019-03-23T03:11:02.613Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-03-23T03:11:02.613Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-03-23T03:11:03.197Z] <<< HTTP RESPONSE 200
+[debug] [2019-03-23T03:11:03.206Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/lamanzanarojawebsite:testIamPermissions  
+
+[debug] [2019-03-23T03:11:03.949Z] <<< HTTP RESPONSE 200
+[debug] [2019-03-23T03:11:03.951Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/lamanzanarojawebsite  
+ 
+[debug] [2019-03-23T03:11:04.457Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/mauri/Workspace/lmr-landing-page'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2019-03-23T03:11:05.164Z] Fetching environment
+[debug] [2019-03-23T03:11:05.166Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/32088516449:getServerAppConfig  
+ 
+[debug] [2019-03-23T03:11:05.981Z] <<< HTTP RESPONSE 200
+[debug] [2019-03-23T03:11:05.981Z] Starting @google-cloud/functions-emulator
+[debug] [2019-03-23T03:11:07.023Z] Parsing function triggers
+[info] ✔  functions: updateNewViews: http://localhost:5000/lamanzanarojawebsite/us-central1/updateNewViews
+[info] ✔  functions: updateNewMetadata: http://localhost:5000/lamanzanarojawebsite/us-central1/updateNewMetadata
