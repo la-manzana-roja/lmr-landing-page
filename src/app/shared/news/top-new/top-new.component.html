@@ -1,0 +1,27 @@
+<div class="card left-align" data-aos="zoom-in" data-aos-duration="1000">
+  <div class="card-image waves-effect waves-block waves-light">
+    <img class="activator" [src]="link.image? link.image : defaultImage" [alt]="link.title">
+  </div>
+  <div class="card-content">
+    <span class="activator">
+      <i class="material-icons right">more_vert</i>
+    </span>
+    <span class="card-title activator grey-text text-darken-4">
+      {{ link.title }}
+    </span>
+    <p>
+      <a (click)="updateNewViews(link)" [href]="link.url" target="_blank" rel="noopener noreferrer">
+        LEER MÁS
+      </a>
+    </p>
+  </div>
+  <div class="card-reveal">
+    <span class="card-title">
+      <i class="material-icons right">close</i>
+    </span>
+    <span class="card-title grey-text text-darken-4">
+      {{ link.title }}
+    </span>
+    <p>{{ link.description }}</p>
+  </div>
+</div>

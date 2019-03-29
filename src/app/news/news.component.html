@@ -5,33 +5,7 @@
     <div class="col s12 m4 top-news hide-on-med-and-up">
       <p>Lo más visto</p>
       <div *ngFor="let new of topNews$ | async">
-        <div class="card left-align" data-aos="zoom-in" data-aos-duration="1000">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" [src]="new.image? new.image : defaultImage" [alt]="new.title">
-          </div>
-          <div class="card-content">
-            <span class="activator">
-              <i class="material-icons right">more_vert</i>
-            </span>
-            <span class="card-title activator grey-text text-darken-4">
-              {{ new.title }}
-            </span>
-            <p>
-              <a (click)="updateNewViews(new)" [href]="new.url" target="_blank" rel="noopener noreferrer">
-                LEER MÁS
-              </a>
-            </p>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title">
-              <i class="material-icons right">close</i>
-            </span>
-            <span class="card-title grey-text text-darken-4">
-              {{ new.title }}
-            </span>
-            <p>{{ new.description }}</p>
-          </div>
-        </div>
+        <lmr-top-new [link]="new"></lmr-top-new>
       </div>
     </div>
 
@@ -57,33 +31,7 @@
     <div class="col s12 m4 top-news hide-on-small-only">
       <p>Lo más visto</p>
       <div *ngFor="let new of topNews$ | async">
-        <div class="card left-align" data-aos="zoom-in" data-aos-duration="1000">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" [src]="new.image? new.image : defaultImage" [alt]="new.title">
-          </div>
-          <div class="card-content">
-            <span class="activator">
-              <i class="material-icons right">more_vert</i>
-            </span>
-            <span class="card-title activator grey-text text-darken-4">
-              {{ new.title }}
-            </span>
-            <p>
-              <a (click)="updateNewViews(new)" [href]="new.url" target="_blank" rel="noopener noreferrer">
-                LEER MÁS
-              </a>
-            </p>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title">
-              <i class="material-icons right">close</i>
-            </span>
-            <span class="card-title grey-text text-darken-4">
-              {{ new.title }}
-            </span>
-            <p>{{ new.description }}</p>
-          </div>
-        </div>
+        <lmr-top-new [link]="new"></lmr-top-new>
       </div>
     </div>
   </div>

@@ -7,6 +7,7 @@ import { BannerComponent } from './banner/banner.component';
 import { TopNewsComponent } from './top-news/top-news.component';
 import { NewsService } from '../shared/news/news.service';
 import { ParallaxDirective } from '../shared/parallax/parallax.directive';
+import { TopNewModule } from '../shared/news/top-new/top-new.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { ParallaxDirective } from '../shared/parallax/parallax.directive';
     TopNewsComponent,
     ParallaxDirective
   ],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TopNewModule],
   providers: [NewsService]
 })
 export class HomeModule {}
