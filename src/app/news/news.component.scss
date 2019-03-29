@@ -1,7 +1,7 @@
 @import '../../mat-variables';
 
-.all-news {
-  border-top: 1px solid black;
+.news {
+  border-top: 2px solid gray;
 
   .card {
     height: 300px;
@@ -16,35 +16,36 @@
     overflow: hidden;
 
     img {
+      min-width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
 
-  .card-content {
-    max-height: 80%;
+  .card-stacked {
+    max-width: 50%;
 
-    @media #{$medium-and-down} {
-      padding: 10px;
-    }
-
-    h4 {
-      font-weight: bold;
-      font-size: 1.3em;
-      margin-block-start: 0px;
-
+    .card-content {
       @media #{$medium-and-down} {
-        font-size: 1em;
+        padding: 10px;
       }
-    }
 
-    p {
-      overflow: hidden;
-      position: relative;
-      line-height: 1.2em;
-      max-height: 3.6em;
-      margin-right: -1em;
-      padding-right: 1em;
+      h4 {
+        font-weight: bold;
+        font-size: 1.3em;
+        margin-block-start: 0px;
+
+        @media #{$medium-and-down} {
+          font-size: 1em;
+        }
+      }
+
+      p {
+        overflow: hidden;
+        position: relative;
+        line-height: 1.2em;
+        max-height: 4.8em;
+      }
     }
   }
 
@@ -52,35 +53,5 @@
     @media #{$medium-and-down} {
       padding: 10px;
     }
-  }
-}
-
-.top-news {
-  border-top: 1px solid black;
-
-  .card-image {
-    height: 200px;
-    overflow: hidden;
-
-    img {
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
-  .card-title {
-    font-size: 1em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .activator {
-    cursor: pointer;
-  }
-
-  .see-more {
-    margin-top: 30px;
-    margin-bottom: 40px;
   }
 }
