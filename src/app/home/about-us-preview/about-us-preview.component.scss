@@ -1,3 +1,35 @@
-.preview {
-  height: 200px;
+.about-us {
+  &-image {
+    height: 400px;
+    overflow: hidden;
+    border-radius: 7px;
+    margin-top: 20px;
+
+    img {
+      position: relative;
+      width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-info {
+    height: 400px;
+    padding: 20px;
+    position: relative;
+
+    p {
+      overflow: hidden;
+      position: relative;
+      line-height: 1.2em;
+      max-height: 11.5em;
+    }
+
+    .see-brief {
+      width: 100%;
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+    }
+  }
 }
