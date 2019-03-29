@@ -1,9 +1,11 @@
-<h4 class="center-align">Noticias</h4>
-<div class="row center-align">
-  <div *ngFor="let new of news$ | async" class="col s12 m4">
-    <lmr-top-new [link]="new"></lmr-top-new>
-  </div>
-  <div class="col s12">
-    <a routerLink="/news" class="btn-large waves-effect see-more">Ver Más</a>
+<div class="container">
+  <h4 class="center-align">Noticias</h4>
+  <div class="row center-align">
+    <div *ngFor="let new of news$ | async" class="col s12 m4">
+      <lmr-top-new [link]="new"></lmr-top-new>
+    </div>
+    <div class="col s12">
+      <a routerLink="/news" class="btn-large waves-effect see-more">Ver Más</a>
+    </div>
   </div>
 </div>

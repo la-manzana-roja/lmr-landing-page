@@ -1,6 +1,12 @@
+@import '../../../../mat-variables';
+
 .card-image {
   height: 200px;
   overflow: hidden;
+
+  @media #{$medium-and-down} {
+    height: 150px;
+  }
 
   img {
     height: 100%;

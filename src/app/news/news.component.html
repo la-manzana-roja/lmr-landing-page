@@ -2,36 +2,39 @@
   <div class="row">
     <h3>Noticias</h3>
 
-    <div class="col s12 m4 top-news hide-on-med-and-up">
-      <p>Lo más visto</p>
-      <div *ngFor="let new of topNews$ | async">
-        <lmr-top-new [link]="new"></lmr-top-new>
+    <div class="news">
+      <div class="col s12 hide-on-med-and-up">
+        <p>Lo más visto</p>
+        <div *ngFor="let new of topNews$ | async">
+          <lmr-top-new [link]="new"></lmr-top-new>
+        </div>
       </div>
-    </div>
 
-    <div class="col s12 m8 all-news">
-      <div *ngFor="let new of news$ | async">
-        <div class="card horizontal" data-aos="fade-right" data-aos-duration="1000">
-          <div class="card-image">
-            <img [src]="new.image? new.image : defaultImage" [alt]="new.title">
-          </div>
-          <div class="card-stacked">
-            <div class="card-content">
-              <h4>{{ new.title }}</h4>
-              <p class="hide-on-small-only">{{ new.description }}</p>
+      <div class="col s12 m8">
+        <p class="hide-on-med-and-up">Todas las noticias</p>
+        <div *ngFor="let new of news$ | async">
+          <div class="card horizontal" data-aos="fade-right" data-aos-duration="1000">
+            <div class="card-image">
+              <img [src]="new.image? new.image : defaultImage" [alt]="new.title">
             </div>
-            <div class="card-action">
-              <a (click)="updateNewViews(new)" [href]="new.url" target="_blank" rel="noopener noreferrer">LEER MÁS</a>
+            <div class="card-stacked">
+              <div class="card-content">
+                <h4>{{ new.title }}</h4>
+                <p class="hide-on-small-only">{{ new.description }}</p>
+              </div>
+              <div class="card-action">
+                <a (click)="updateNewViews(new)" [href]="new.url" target="_blank" rel="noopener noreferrer">LEER MÁS</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="col s12 m4 top-news hide-on-small-only">
-      <p>Lo más visto</p>
-      <div *ngFor="let new of topNews$ | async">
-        <lmr-top-new [link]="new"></lmr-top-new>
+      <div class="col m4 hide-on-small-only">
+        <p>Lo más visto</p>
+        <div *ngFor="let new of topNews$ | async">
+          <lmr-top-new [link]="new"></lmr-top-new>
+        </div>
       </div>
     </div>
   </div>

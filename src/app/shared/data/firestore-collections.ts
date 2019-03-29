@@ -1,3 +1,4 @@
 export const FirestoreCollections = {
-  news: 'news'
+  news: 'news',
+  metrics: 'metrics'
 };
