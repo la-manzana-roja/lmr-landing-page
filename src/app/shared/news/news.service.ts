@@ -9,6 +9,7 @@ import { DataService } from '../data/data.service';
 import { CloudFunctions } from '../data/cloud-functions';
 import { FirestoreCollections } from '../data/firestore-collections';
 import { New } from '../models/new';
+import { DataOrder } from '../models/data-type';
 
 const DEFAULT_NEW_IMAGE = 'assets/images/logo-01.png';
 const MAX_TOP_NEWS_LENGTH = 3;
@@ -31,17 +32,12 @@ export class NewsService extends DataService<New> {
   }
 
   getTopNews(): Observable<New[]> {
-    return this.db
-      .collection<New>(this.collectionName, ref =>
-        ref.orderBy('views', 'desc').limit(MAX_TOP_NEWS_LENGTH)
-      )
-      .valueChanges()
-      .pipe(
-        map(news => {
-          this.verifyNewsAndUpdateMetadata(news);
-          return news;
-        })
-      );
+    return this.getAllSorted('views', DataOrder.desc, MAX_TOP_NEWS_LENGTH).pipe(
+      map(news => {
+        this.verifyNewsAndUpdateMetadata(news);
+        return news;
+      })
+    );
   }
 
   private verifyNewsAndUpdateMetadata(news: New[]): void {
