@@ -4,5 +4,9 @@ export const FirebaseConfig = {
   databaseURL: '',
   projectId: '',
   storageBucket: '',
-  messagingSenderId: ''
+  messagingSenderId: '',
+};
+
+export const GoogleMapsKey = {
+  apiKey: '',
 };
