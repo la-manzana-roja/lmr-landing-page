@@ -1,0 +1,52 @@
+<div class="container" data-aos="fade-up">
+  <h4 class="center-align"> Contáctanos </h4>
+  <br>
+  <div class="row">
+    <div class="col s12 m8">
+      <div class="card-panel">
+        <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+          <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true">
+            <agm-info-window [isOpen]="true">
+              <h5>Univalle</h5>
+              <p>Avenida Ayacucho Nro. 56</p>
+              <p>Cochabamba</p>
+              <p>Bolivia</p>
+            </agm-info-window>
+          </agm-marker>
+        </agm-map>
+      </div>
+    </div>
+    <div class="col s12 m4 center-align">
+      <h5><i class="fas fa-map-marker-alt"></i> Univalle</h5>
+      <p>Avenida Ayacucho Nro. 56</p>
+      <p>Cochabamba</p>
+      <p>Bolivia</p>
+      <br>
+      <h5><i class="fas fa-phone"></i> Teléfono</h5>
+      <a href="tel:(+591) 78364554">
+        (+591) 78364554
+      </a>
+      <br><br>
+      <h5><i class="far fa-envelope"></i> Correo</h5>
+      <a href="mailto:ba.lamanzanaroja.bolivia@gmail.com">ba.lamanzanaroja.bolivia@gmail.com</a>
+    </div>
+  </div>
+
+  <ul lmrCollapsible class="collapsible popout">
+    <li class="active">
+      <div class="collapsible-header">
+        <h6><i class="fa fa-bus" aria-hidden="true"></i>Encuéntranos!</h6>
+      </div>
+      <div class="collapsible-body">
+        <p>
+          <strong>Conduciendo: </strong>
+          Consulte las instrucciones proporcionadas por
+          <a href="http://www.google.com/maps/place/{{ latitude }},{{ longitude }}" target="_blank"
+            rel="noopener noreferrer">Google Maps.</a>
+        </p>
+        <p><strong> Transporte:</strong>
+          Las siguientes líneas de transporte público pueden dejarte cerca a las instalaciones de La Manzana Roja: 260, 270, 130, 120, 230.</p>
+      </div>
+    </li>
+  </ul>
+</div>

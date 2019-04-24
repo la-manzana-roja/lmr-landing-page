@@ -27,8 +27,8 @@ jobs:
           name: Linting
           command: npm run lint
       - run:
-          name: Inject Firebase DB keys
-          command: npm run firebase:override-keys
+          name: Inject Firebase DB  and Google Maps keys
+          command: npm run config-keys:override-keys
       - run:
           name: Building
           command: npm run build:client

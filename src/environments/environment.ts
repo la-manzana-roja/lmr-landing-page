@@ -1,4 +1,4 @@
-import { FirebaseConfig } from './firebase-config';
+import { FirebaseConfig, GoogleMapsKey } from './keys-config';
 
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
@@ -7,7 +7,9 @@ import { FirebaseConfig } from './firebase-config';
 export const environment = {
   production: false,
   firebase: FirebaseConfig,
-  cloudFunctionsUrl: 'http://localhost:5000/lamanzanarojawebsite/us-central1'
+  cloudFunctionsUrl:
+    'http://localhost:5000/lamanzanarojawebsite/us-central1',
+  googleMaps: GoogleMapsKey
 };
 
 /*
