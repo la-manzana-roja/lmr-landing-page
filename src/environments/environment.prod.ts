@@ -1,4 +1,4 @@
-import { FirebaseConfig, GoogleMapsKey } from './keys-config';
+import { FirebaseConfig, GoogleMapsKey } from './config-keys';
 
 export const environment = {
   production: true,

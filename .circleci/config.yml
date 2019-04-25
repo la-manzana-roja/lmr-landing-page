@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/project
     docker:
-      - image: circleci/node:chakracore-10.13.0-browsers
+      - image: circleci/node:10.15.3-browsers
     steps:
       - checkout
       - run:
@@ -27,7 +27,7 @@ jobs:
           name: Linting
           command: npm run lint
       - run:
-          name: Inject Firebase DB  and Google Maps keys
+          name: Inject Firebase and Google Maps keys
           command: npm run config-keys:override-keys
       - run:
           name: Building
@@ -42,7 +42,7 @@ jobs:
             - .firebaserc
   deploy:
     docker:
-      - image: circleci/node:chakracore-10.13.0-browsers
+      - image: circleci/node:10.15.3-browsers
     working_directory: ~/project
     steps:
       - run:
