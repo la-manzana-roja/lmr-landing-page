@@ -12,6 +12,7 @@ import { ParallaxDirective } from '../shared/parallax/parallax.directive';
 import { TopNewModule } from '../shared/news/top-new/top-new.module';
 import { MetricsService } from './metrics/metrics.service';
 import { AboutUsPreviewComponent } from './about-us-preview/about-us-preview.component';
+import { OportunitiesComponent } from './oportunities/oportunities.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AboutUsPreviewComponent } from './about-us-preview/about-us-preview.com
     TopNewsComponent,
     ParallaxDirective,
     MetricsComponent,
-    AboutUsPreviewComponent
+    AboutUsPreviewComponent,
+    OportunitiesComponent
   ],
   imports: [CommonModule, RouterModule, TopNewModule],
   providers: [NewsService, MetricsService]
